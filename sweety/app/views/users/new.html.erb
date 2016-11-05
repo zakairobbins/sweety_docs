@@ -1,0 +1,12 @@
+<h1>Sign up here</h1>
+
+<% if @user.errors.any? %>
+    <p>Sorry, your account can't be saved because:</p>
+    <ul>
+	    <% @user.errors.full_messages.each do |msg| %>
+	      <li><%= msg %></li>
+	    <% end %>
+    </ul>
+<% end %>
+
+<%= render partial: 'form' %>
