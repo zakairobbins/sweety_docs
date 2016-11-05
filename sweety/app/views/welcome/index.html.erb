@@ -1,3 +1,15 @@
 <h1>Welcome, Sweety</h1>
 
 <p><%= @user.name %></p>
+
+<table>
+	<th colspan="2">What would you like to do?</th>
+	<tr>
+		<td><%= link_to 'Record a reading', new_reading_path %></td>
+		<td>View a report</td>
+	</tr>
+</table>
+
+<%= @user.readings.each do |reading| %>
+<p><%= reading %></p>
+<% end %>

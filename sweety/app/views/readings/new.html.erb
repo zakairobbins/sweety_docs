@@ -1,0 +1,7 @@
+<h1>Enter a reading</h1>
+
+<%= form_for @reading do |f| %>
+<%= f.label :level, 'My blood glucose level is' %>
+<%= f.text_field :level %>
+<%= f.submit "Enter" %>
+<% end %>
