@@ -1,5 +1,14 @@
 <h1>Enter a reading</h1>
 
+<% if @reading.errors.any? %>
+    <p>Sorry, we couldn't save your reading because:</p>
+    <ul>
+	    <% @reading.errors.full_messages.each do |msg| %>
+	      <li><%= msg %></li>
+	    <% end %>
+    </ul>
+<% end %>
+
 <%= form_for @reading do |f| %>
 <%= f.label :level, 'My blood glucose level is' %>
 <%= f.text_field :level %>
