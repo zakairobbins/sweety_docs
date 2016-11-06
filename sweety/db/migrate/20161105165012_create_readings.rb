@@ -4,6 +4,7 @@ class CreateReadings < ActiveRecord::Migration
     	t.integer :level
     	t.references :user
       t.date :date
+      t.timestamps null: false
     end
   end
 end
