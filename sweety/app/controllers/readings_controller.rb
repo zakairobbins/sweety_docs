@@ -11,11 +11,11 @@ class ReadingsController < ApplicationController
 	end
 
 	def create
-		@reading = Reading.new(level: params[:reading][:level], user_id: @user.id)
+		@reading = Reading.new(level: params[:reading][:level], user_id: current_user.id)
 		if @reading.save
 			redirect_to root_url
 		else
-			render :action => 'new'
+			render 'new'
 		end
 	end
 
