@@ -1,0 +1,10 @@
+<%= link_to 'home', root_path %>
+<% if @report %>
+	<h1>Your blood glucose levels for this period were</h1>
+	<p>Max: <%= @report[:max] %>, Min: <%= @report[:min] %>, Average: <%= @report[:average] %></p>
+	<%= link_to 'submit a different date', new_report_path %>
+	<%= link_to 'home', root_path %>
+<% else %>
+	<p>There are no entries for this day</p>
+	<%= link_to 'submit a different date', new_report_path %>
+<% end %>

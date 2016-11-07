@@ -1,0 +1,8 @@
+<%= link_to 'home', root_path %>
+<h1>What report would you like to see?</h1>
+<%= form_tag('/reports', method: 'post') do %>
+	<%= label_tag(:date, "select a date") %>
+	<%= date_field(:date, :end_date) %>
+	<%= select_tag(:time_range, options_for_select([['Today', 1], ['Month to date', 2], ['Past month', 3]])) %>
+	<%= submit_tag 'Enter' %>
+<% end %>
