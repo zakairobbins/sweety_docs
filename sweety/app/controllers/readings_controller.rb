@@ -1,6 +1,6 @@
 class ReadingsController < ApplicationController
 	before_action :auth_user
-	before_action :current_user, only: [:create]
+	before_action :current_user
 
 	def index
 		redirect_to '/users/new' unless session[:user_id]
@@ -13,7 +13,7 @@ class ReadingsController < ApplicationController
 	def create
 		@reading = Reading.new(level: params[:reading][:level], user_id: current_user.id)
 		if @reading.save
-			redirect_to root_url
+			redirect_to root_path, success: "Logged in successfully"
 		else
 			render 'new'
 		end

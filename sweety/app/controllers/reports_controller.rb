@@ -1,5 +1,6 @@
 class ReportsController < ApplicationController
 	before_action :auth_user
+	before_action :current_user
 
 	def new
 
