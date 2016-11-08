@@ -1,0 +1,53 @@
+body {
+	font-family: helvetica;
+}
+
+.navbar {
+    background-color: #2C596C;
+    background-image: linear-gradient(#2C86A8, #2C596C);
+    color: #EEEEEE;
+}
+
+.navbar .navbar-brand {
+    color: #EEEEEE;
+}
+.navbar .navbar-brand:hover,
+.navbar .navbar-brand:focus {
+    color: #BBB;
+}
+/* link */
+.navbar .navbar-nav > li > a {
+    color: #EEE;
+}
+.navbar .navbar-nav > li > a:hover,
+.navbar .navbar-nav > li > a:focus {
+    color: #BBB;
+    background-color: #2C596C;
+    background-image: linear-gradient(#2C86A8, #2C596C);
+}
+.navbar .navbar-nav > .active > a,
+.navbar .navbar-nav > .active > a:hover,
+.navbar .navbar-nav > .active > a:focus {
+    background-color: #2C596C;
+    background-image: linear-gradient(#2C86A8, #2C596C);
+}
+.navbar .navbar-nav > .open > a,
+.navbar .navbar-nav > .open > a:hover,
+.navbar .navbar-nav > .open > a:focus {
+    background-color: #2C596C;
+    background-image: linear-gradient(#2C86A8, #2C596C);
+}
+
+.navbar-nav>li>.dropdown-menu {
+    background-color: #2C596C;
+    background-image: linear-gradient(#2C86A8, #2C596C);
+}
+.dropdown-menu>li>a {
+    color: #EEE;
+}
+
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+    background-color: transparent;
+    background-image: none;
+    color: #BBB;
+}
