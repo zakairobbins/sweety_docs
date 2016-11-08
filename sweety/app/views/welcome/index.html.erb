@@ -1,15 +1,20 @@
-<h1>Welcome, Sweety</h1>
 
-<p><%= @user.name %></p>
+<%= render partial: 'shared/flashes' %>
+<div class="jumbotron">
+  <div class="container">
+    <h1>Welcome, Sweety!</h1>
+    <p>Sweety is a application for recording blood glucose levels for diabetics.</p>
+    <p>Record up to four readings a day.</p>
+    <p>View daily, monthly, and month-to-date reports on your levels.</p>
+  </div>
+</div>
 
-<table>
-	<th colspan="2">What would you like to do?</th>
-	<tr>
-		<td><%= link_to 'Record a reading', new_reading_path %></td>
-		<td><%= link_to 'View a report', new_report_path %></td>
-	</tr>
-</table>
-
-<%= @user.readings.each do |reading| %>
-<p><%= reading %></p>
-<% end %>
+<div class="container">
+  <div class="row action-links">
+    <div class="col-md-6">
+      <h2><%= link_to 'Record a reading', new_reading_path %></h2>
+    </div>
+    <div class="col-md-6">
+      <h2><%= link_to 'View a report', new_report_path %></h2>
+    </div>
+  </div>

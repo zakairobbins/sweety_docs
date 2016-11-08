@@ -1,0 +1,15 @@
+.jumbotron, .action-links > .col-md-6 {
+	text-align: center;
+}
+.jumbotron h1 {
+	color: #2C7F9F;
+}
+
+h2 > a {
+	color: #2C7F9F;
+}
+
+h2 > a:hover {
+	text-decoration: none;
+	color: #2B5A6E;
+}

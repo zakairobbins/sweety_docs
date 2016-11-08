@@ -1,14 +1,4 @@
-<h1> Welcome, Sweety</h1>
-
-<% if !flash.empty? %>
-<div id="flash">
-    <% flash.keys.each do |k| %>
-        <div class="<%= k %>">
-            <%= flash[k] %>
-        </div>
-    <% end %>
-</div>
-<% end %>
+<%= render partial: 'shared/flashes' %>
 
 <p>Please log in below or <%= link_to 'sign up', new_user_path %></p>
 

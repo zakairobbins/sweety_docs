@@ -1,17 +1,31 @@
-<%= link_to 'home', root_path %>
-<h1>Enter a reading</h1>
+<div class="row">
+	<div class="errors">
+		<% if @reading.errors.any? %>
+		<div class="errors">
+	    <p>Sorry, we couldn't save your reading because:</p>
+	    <ul>
+		    <% @reading.errors.full_messages.each do |msg| %>
+		      <li><%= msg %></li>
+		    <% end %>
+	    </ul>
+		</div>
+		<% end %>
+	</div>
+	<div>
+		<h1>Enter a reading</h1>
+	</div>
+</div>
 
-<% if @reading.errors.any? %>
-    <p>Sorry, we couldn't save your reading because:</p>
-    <ul>
-	    <% @reading.errors.full_messages.each do |msg| %>
-	      <li><%= msg %></li>
-	    <% end %>
-    </ul>
-<% end %>
-
-<%= form_for @reading do |f| %>
-<%= f.label :level, 'My blood glucose level is' %>
-<%= f.text_field :level %>
-<%= f.submit "Enter" %>
-<% end %>
+<div class="row">
+	<div class="col-md-12">
+		<%= form_for @reading, :html => {:class => "form-inline"} do |f| %>
+			<div class="form-group">
+				<%= f.label :level, 'My blood glucose level is' %>
+				<%= f.text_field :level, class: "form-control" %>
+				<span class="input-group-btn">
+				  <%= f.submit "Enter", class: "btn btn-default" %>
+		    </span>
+			</div>
+		<% end %>
+	</div>
+</div>
