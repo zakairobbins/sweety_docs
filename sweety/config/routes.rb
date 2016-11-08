@@ -10,7 +10,8 @@ Rails.application.routes.draw do
 
   resources :users
 
-  resources :sessions
+  resources :sessions, :only => [:new, :create]
+  get 'signout', to: 'sessions#destroy', as: 'signout'
 
   resources :readings
 
